@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.wdfall.slot.web.controller.RunGameController" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/web/controller/RunGameController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="160" width="581" x="1247" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.wdfall.slot.rungame.service.RunGameServiceProvider" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/service/RunGameServiceProvider.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="286" width="484" x="1224" y="381"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="com.wdfall.slot.rungame.service.IFRunGameService" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/service/IFRunGameService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="124" width="253" x="1201" y="1066"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="com.wdfall.slot.rungame.service.BasicRunGameService" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/service/BasicRunGameService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="304" width="258" x="949" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.wdfall.slot.rungame.games.AbstractRun" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/games/AbstractRun.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="645" width="255" x="571" y="381"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.wdfall.slot.rungame.games.Stage01SimulatorRun" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/games/Stage01SimulatorRun.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="160" width="187" x="495" y="1066"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.wdfall.slot.rungame.RunGameConstants.RunGameProgress" 
+    project="vSlot-Simulator" file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/RunGameConstants.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="304" width="212" x="949" y="1066"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.wdfall.slot.rungame.games.Stage01BonusRun" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/games/Stage01BonusRun.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="160" width="187" x="41" y="1066"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.wdfall.slot.rungame.games.Stage01FreespinRun" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/games/Stage01FreespinRun.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="160" width="187" x="268" y="1066"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.wdfall.slot.rungame.games.BasicSimulatorRun" project="vSlot-Simulator" 
+    file="/vSlot-Simulator/src/main/java/com/wdfall/slot/rungame/games/BasicSimulatorRun.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="160" width="187" x="722" y="1066"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="13">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="14" name="progress">        
+        <position height="0" width="0" x="359" y="-198"/>      
+      </attribute>      
+      <multiplicity id="15" minimum="0" maximum="1">        
+        <position height="0" width="0" x="359" y="-198"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="16">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="17" name="servicePool">        
+        <position height="0" width="0" x="-610" y="266"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-610" y="266"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="19">    
+    <bendpoint x="1084" y="381"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="20">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="21" name="runGameServiceProvider">        
+        <position height="0" width="0" x="-79" y="-48"/>      
+      </attribute>      
+      <multiplicity id="22" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-79" y="-48"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="24">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="25" name="runner">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="27">    
+    <bendpoint x="958" y="381"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="28" name="progress">        
+        <position height="0" width="0" x="359" y="-198"/>      
+      </attribute>      
+      <multiplicity id="29" minimum="0" maximum="1">        
+        <position height="0" width="0" x="359" y="-198"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="false"/>    
+    <operations public="false" package="false" protected="false" private="false" static="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

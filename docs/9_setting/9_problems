@@ -1,0 +1,20 @@
+0. reference: 
+http://myblog.opendocs.co.kr/archives/1657
+
+1. 문제상황
+> 다음과 같은 에러와 함께 Eclipse에서 Tomcat이 실행되지 않았다.
+심각: Error configuring application listener of class org.springframework.web.context.ContextLoaderListener
+java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1854)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1703)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	....
+
+2. 문제확인
+> Maven > Update Project Configuration 실행시 maven 라이브러리 경로가 삭제되는 현상이 발생한다고 한다.
+
+3. 문제해결
+> 다음 메뉴에서 경로를 설정해주면 정상적으로 서버가 시작된다.
+
+* 프로젝트 우클릭 >  properties
+* Deployment Assembly > Add 버튼 > Java Build Path Entries > Maven Dependencies 선택 > Apply버튼	

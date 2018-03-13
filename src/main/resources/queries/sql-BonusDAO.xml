@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BonusDAO">
+
+	<select id="selectInputBySeq" parameterType="map" resultType="com.wdfall.slot.model.vo.BonusInputVO">
+		SELECT *
+		FROM tb_bonus_input
+		WHERE seq = #{seq}
+	</select>
+
+	
+	<insert id="insertInput" parameterType="com.wdfall.slot.model.vo.BonusInputVO" useGeneratedKeys="true" keyProperty="seq" > 
+		INSERT INTO tb_bonus_input (
+			seq
+			,stage
+			,json_data
+			,register_time
+			,db_path
+			,filename
+			)
+		VALUES (
+			#{seq}
+			,#{stage}
+			,#{jsonData}
+			,#{registerTime}
+			,#{dbPath}
+			,#{filename}
+			)
+	</insert>
+	
+	
+	<insert id="insertResult" parameterType="com.wdfall.slot.model.vo.BonusResultVO" useGeneratedKeys="true" keyProperty="seq" > 
+		INSERT INTO tb_bonus_result (
+			seq
+			,input_seq
+			,stage
+			,register_time
+			,username
+			,play_game_count
+			,total_bet
+			,payout
+			,payout_rate
+			,win_game_rate
+			)
+		VALUES (
+			#{seq}
+			,#{inputSeq}
+			,#{stage}
+			,#{registerTime}
+			,#{username}
+			,#{playGameCount}
+			,#{totalBet}
+			,#{payout}
+			,#{payoutRate}
+			,#{winGameRate}
+			)
+	</insert>
+	
+	
+	<select id="selectResultList" parameterType="map" resultType="com.wdfall.slot.model.vo.BonusResultVO">
+		SELECT *
+		FROM tb_bonus_result
+		WHERE stage = #{stage}
+		ORDER BY seq DESC
+	</select>
+	
+	<select id="selectResultDetail" parameterType="map" resultType="com.wdfall.slot.model.vo.BonusResultVO">
+		SELECT *
+		FROM tb_bonus_result
+		WHERE seq = #{seq}
+		ORDER BY seq DESC
+	</select>
+	
+</mapper>

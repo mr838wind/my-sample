@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 30초마다 설정 파일의 변경을 확인한다. 파일이 변경되면 다시 로딩한다 -->
+<configuration scan="true" scanPeriod="30 seconds">
+  
+  	<!-- ###### properties ###### -->
+  	<!-- project folder 아래 생성됨 -->
+	<property name="LOG_HOME" value="logs" />
+	<property name="LOG_FILE_NAME" value="test-vslot-simulator.log" />
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="LOG_BASE_PACKAGE" value="com.wdfall.slot" />
+    
+    
+    
+    <!-- ###### appenders ###### -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${LOG_FILE_NAME}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_HOME}/${LOG_FILE_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                ${LOG_PATTERN}
+            </pattern>
+        </encoder>
+    </appender>
+    
+    
+    
+     
+    <!-- ###### loggers ###### -->
+    <!-- turn OFF all logging (children can override) -->
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+    
+    <!-- base logger -->
+    <logger name="${LOG_BASE_PACKAGE}" level="DEBUG" additivity="false" >
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </logger>
+    
+    <!-- sql -->
+	<logger name="jdbc" level="OFF"/>
+	
+	<logger name="jdbc.sqlonly" level="DEBUG" additivity="false">>
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+	</logger>  
+	
+	<logger name="jdbc.sqltiming" level="ERROR" additivity="false">>
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+	</logger>  
+	
+	<logger name="jdbc.resultsettable" level="ERROR" additivity="false">> 
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+	</logger>
+	
+    
+    <!-- others -->
+    <logger name="com.wdfall.slot.business.simulator.loader" level="INFO" additivity="false" >
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </logger>
+    
+    
+</configuration>

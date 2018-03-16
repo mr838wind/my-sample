@@ -8,7 +8,6 @@
 		FROM tb_bonus_input
 		WHERE seq = #{seq}
 	</select>
-
 	
 	<insert id="insertInput" parameterType="com.wdfall.slot.model.vo.BonusInputVO" useGeneratedKeys="true" keyProperty="seq" > 
 		INSERT INTO tb_bonus_input (

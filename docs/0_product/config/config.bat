@@ -1,1 +1,0 @@
-set slot_username="desktop"

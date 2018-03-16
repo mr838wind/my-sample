@@ -6,7 +6,7 @@
   	<!-- ###### properties ###### -->
   	<!-- project folder 아래 생성됨 -->
 	<property name="LOG_HOME" value="logs" />
-	<property name="LOG_FILE_NAME" value="test-vslot-simulator.log" />
+	<property name="LOG_FILE_NAME" value="my-sample.log" />
     <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
     <property name="LOG_BASE_PACKAGE" value="com.wdfall.slot" />
     

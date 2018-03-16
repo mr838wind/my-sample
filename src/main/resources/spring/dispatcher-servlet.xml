@@ -20,7 +20,7 @@
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven />
-	<context:component-scan base-package="com.wdfall.slot" use-default-filters="false" > 
+	<context:component-scan base-package="com.wind" use-default-filters="false" > 
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	
@@ -98,7 +98,7 @@
     		<mvc:exclude-mapping path="/login/**"/>
     		<mvc:exclude-mapping path="/resources/**"/>
     		<mvc:exclude-mapping path="/openapi/**"/>
-    		<bean class="com.wdfall.slot.spring.LoginCheckInterceptor"/>
+    		<bean class="com.wind.spring.LoginCheckInterceptor"/>
     	</mvc:interceptor>
     </mvc:interceptors>
      -->

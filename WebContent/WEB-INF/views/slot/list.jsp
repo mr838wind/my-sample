@@ -26,7 +26,7 @@
 			<!-- header -->
 	        <div class="row">
 	            <div class="col-lg-12">
-	                <h1 class="page-header">LIST: ${stage} / ${type}</h1>
+	                <h1 class="page-header">LIST</h1>
 	            </div>
 	            <!-- /.col-lg-12 -->
 	        </div>
@@ -51,25 +51,17 @@
                                         <th>시간</th>
                                         <th>사용자</th>
                                         <th>실행횟수</th>
-                                        <th>베팅금액</th>
-                                        <th>지급액</th>
-                                        <th>지급률(%)</th>
-                                        <th>승률(%)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     
                                     <c:forEach var="item" items="${result}">
-                                    	<c:url var="detailUrl" value="/detail/${stage}/${type}/${item.seq}" />
+                                    	<c:url var="detailUrl" value="/detail" />
                                     
 	                                    <tr onclick="goUrl('${detailUrl}');" >
-	                                        <td>${func:formatDateTime(item.registerTime)}</td>
-	                                        <td>${item.username}</td>
-	                                        <td class="text-right">${func:formatNumber(item.playGameCount)}</td>
-	                                        <td class="text-right">${func:formatNumber(item.totalBet)}</td>
-	                                        <td class="text-right">${func:formatNumber(item.payout)}</td>
-	                                        <td class="text-right">${func:formatPercent(item.payoutRate)}</td>
-	                                        <td class="text-right">${func:formatPercent(item.winGameRate)}</td>
+	                                        <td>ddd</td>
+	                                        <td>aaa</td>
+	                                        <td class="text-right">ddd</td>
 	                                    </tr>
                                     </c:forEach>
                                
@@ -117,12 +109,6 @@
     }
     
     </script>
-    
-    <!-- excel upload -->
-    <jsp:include page="./inc-run-game-component-js.jsp" >
-    	<jsp:param name="stage" value="${stage}" />
-    	<jsp:param name="type" value="${type}" />
-    </jsp:include>
 	
   </body>
 </html>

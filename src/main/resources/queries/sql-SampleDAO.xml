@@ -3,7 +3,7 @@
 
 <mapper namespace="SampleDAO">
 
-	<select id="selectSampleList" parameterType="hashmap"  resultType="com.wdfall.slot.spring.test.sample.SampleVO" >
+	<select id="selectSampleList" parameterType="hashmap"  resultType="com.wind.sample.service.SampleVO" >
 		select * from tb_sample
 	</select>
 	

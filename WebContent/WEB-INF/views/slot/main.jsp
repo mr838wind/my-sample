@@ -30,7 +30,7 @@
                             Basic
                         </div>
                         <div class="panel-body">
-							<a href="/list/BASIC/SIMULATOR" class="btn btn-outline btn-primary">simulator</a>
+							<a href="/list" class="btn btn-outline btn-primary">simulator</a>
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,9 @@
                             Stage01
                         </div>
                         <div class="panel-body">
-							<a href="/list/STAGE01/BONUS" class="btn btn-outline btn-primary">bonus</a>
-							<a href="/list/STAGE01/FREESPIN" class="btn btn-outline btn-primary">freespin</a>
-							<a href="/list/STAGE01/SIMULATOR" class="btn btn-outline btn-primary">simulator</a>
+							<a href="/list" class="btn btn-outline btn-primary">bonus</a>
+							<a href="/list" class="btn btn-outline btn-primary">freespin</a>
+							<a href="/list" class="btn btn-outline btn-primary">simulator</a>
                         </div>
                     </div>
                 </div>

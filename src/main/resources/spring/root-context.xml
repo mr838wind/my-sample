@@ -18,7 +18,7 @@
 		">
 
 	<!-- Enables the Spring MVC @Service,@Repository,@Component programming model -->
-	<context:component-scan base-package="com.wdfall.slot" use-default-filters="false" > 
+	<context:component-scan base-package="com.wind" use-default-filters="false" > 
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />

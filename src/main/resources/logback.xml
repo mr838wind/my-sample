@@ -53,17 +53,17 @@
     <!-- sql -->
 	<logger name="jdbc" level="OFF"/>
 	
-	<logger name="jdbc.sqlonly" level="DEBUG" additivity="false">>
+	<logger name="jdbc.sqlonly" level="OFF" additivity="false">>
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
 	</logger>  
 	
-	<logger name="jdbc.sqltiming" level="ERROR" additivity="false">>
+	<logger name="jdbc.sqltiming" level="INFO" additivity="false">>
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
 	</logger>  
 	
-	<logger name="jdbc.resultsettable" level="ERROR" additivity="false">> 
+	<logger name="jdbc.resultsettable" level="OFF" additivity="false">> 
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
 	</logger>

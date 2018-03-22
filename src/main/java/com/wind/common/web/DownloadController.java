@@ -1,4 +1,4 @@
-package com.wind.sample.web;
+package com.wind.common.web;
 
 import java.io.File;
 import java.util.HashMap;

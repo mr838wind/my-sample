@@ -40,7 +40,23 @@ public class SampleController {
 		Map<String,Object> resultMap = new HashMap<>();
 		resultMap.put("result", list);
 	    
-		return new ModelAndView("list", resultMap);
+		return new ModelAndView("/sample/list", resultMap);
+	}
+	
+	/**
+	 * 
+	 * @param req
+	 * @return
+	 */
+	@RequestMapping(value = "/detail")
+	public ModelAndView detail( HttpServletRequest req ) {
+		
+		List<SampleVO> list = sampleService.selectSampleList();
+		
+		Map<String,Object> resultMap = new HashMap<>();
+		resultMap.put("result", list);
+	    
+		return new ModelAndView("/sample/detail", resultMap);
 	}
 	
 	

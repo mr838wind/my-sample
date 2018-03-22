@@ -43,7 +43,7 @@ public class FileUtil {
 	
 	public static File copyToTmpFile(File in) throws IOException {
 		String systemTmpDirectory = System.getProperty("java.io.tmpdir");
-		File tmpDirectory = new File(systemTmpDirectory, "vslot_excel_tmp");
+		File tmpDirectory = new File(systemTmpDirectory, "my_tmp");
 		log.debug(">> systemTmpDirectory={}",systemTmpDirectory);
 		
 		if(in == null || !in.exists()) {

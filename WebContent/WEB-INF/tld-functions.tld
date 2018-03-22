@@ -12,31 +12,31 @@
     
     <function>
         <name>formatDateTime</name>
-        <function-class>com.wind.business.utils.TagFunction</function-class>
+        <function-class>com.wind.utils.TagFunction</function-class>
         <function-signature>java.lang.String formatDateTime(java.lang.String)</function-signature>
     </function>
     
     <function>
         <name>formatDate</name>
-        <function-class>com.wind.business.utils.TagFunction</function-class>
+        <function-class>com.wind.utils.TagFunction</function-class>
         <function-signature>java.lang.String formatDate(java.lang.String)</function-signature>
     </function>
     
     <function>
         <name>formatNumber</name>
-        <function-class>com.wind.business.utils.TagFunction</function-class>
+        <function-class>com.wind.utils.TagFunction</function-class>
         <function-signature>java.lang.String formatNumber(java.lang.String)</function-signature>
     </function>
     
     <function>
         <name>formatDouble</name>
-        <function-class>com.wind.business.utils.TagFunction</function-class>
+        <function-class>com.wind.utils.TagFunction</function-class>
         <function-signature>java.lang.String formatDouble(java.lang.String)</function-signature>
     </function>
     
     <function>
         <name>formatPercent</name>
-        <function-class>com.wind.business.utils.TagFunction</function-class>
+        <function-class>com.wind.utils.TagFunction</function-class>
         <function-signature>java.lang.String formatPercent(java.lang.String)</function-signature>
     </function>
     

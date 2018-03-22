@@ -1,4 +1,4 @@
-package com.wind.sample.web;
+package com.wind.common.web;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -35,7 +35,7 @@ public class IndexController {
 	@RequestMapping(value = "/main")
 	public ModelAndView main( HttpServletRequest req ) {
 	    
-		return new ModelAndView("/slot/main");
+		return new ModelAndView("/common/main");
 	}
 	
 	

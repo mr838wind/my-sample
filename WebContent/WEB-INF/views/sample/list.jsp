@@ -33,9 +33,6 @@
 	        
 	        <jsp:include page="../common/inc-back-button.jsp" />
         
-        	<!-- excel upload -->
-        	<jsp:include page="./inc-run-game-component-ui.jsp" />
-        
         	<!-- contents -->
         	<div class="row">
                 <div class="col-lg-12">

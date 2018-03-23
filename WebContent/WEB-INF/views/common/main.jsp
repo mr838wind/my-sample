@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-  	<title>vSlot-Simulator</title>
+  	<title>sample</title>
   	<jsp:include page="../common/inc-header.jsp" />
   </head>
 

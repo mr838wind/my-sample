@@ -4,10 +4,7 @@
 	<artifactId>my-sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
-	<!-- make uber-jar
-	<packaging>jar</packaging>
-	 -->
+  
   
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,7 +71,6 @@
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>javax.servlet-api</artifactId>
 		    <version>3.0.1</version>
-		    <!-- make uber-jar: provided를 지워줌  -->
 		    <scope>provided</scope>
 		</dependency>
  
@@ -298,6 +294,7 @@
 			</resource>
 		</resources>
 		<plugins>
+		
 			<plugin>
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-deploy-plugin</artifactId>
@@ -333,28 +330,8 @@
 	                       <value>db.url=jdbc:mysql://113.198.210.237:13306</value>
 	                   </replacement>
 	                   <replacement>
-	                       <token>db.username=opendesign</token>
-	                       <value>db.username=opendesign</value>
-	                   </replacement>
-	                   <replacement>
-	                       <token>db.password=admin123</token>
-	                       <value>db.password=opendesign1#2</value>
-	                   </replacement>	               
-	                   <replacement>
 	                       <token>global.host=http://localhost:8080</token>
 	                       <value>global.host=http://113.198.210.237:8080</value>
-	                   </replacement>
-	                   <replacement>
-	                       <token>ws.global.host=ws://localhost:8080</token>
-	                       <value>ws.global.host=ws://113.198.210.237:8080</value>
-	                   </replacement>
-	                   <replacement>
-	                       <token>fb.appId=584518088400899</token>
-	                       <value>fb.appId=543987679135375</value>
-	                   </replacement>
-	                   <replacement>
-	                       <token>fb.appSecret=e9bafa22e673e33a0d55ec62b2eeff49</token>
-	                       <value>fb.appSecret=82cc5598ed8597ed35d82f957bda7b69</value>
 	                   </replacement>
 	               </replacements>
 	                --> 
@@ -385,6 +362,8 @@
 		    	make uber-jar 
 		    	maven: package
 		    	(maven-assembly-plugin has some problems with spring, so use maven-shade-plugin instead.)
+		    	change 1: <packaging>jar</packaging>
+		    	change 2: javax.servlet-api >> comment provided
 		    
 			<plugin>
 			  <groupId>org.apache.maven.plugins</groupId>
@@ -417,6 +396,27 @@
 			</plugin>
 		    -->
 		    
+		    
+		    <!-- 
+		    	Tomcat plugin (goal: tomcat7:run-war):  run war with embedded tomcat
+		    	http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/plugin-info.html 
+		    -->  
+			<plugin>  
+			 	<groupId>org.apache.tomcat.maven</groupId>  
+			 	<artifactId>tomcat7-maven-plugin</artifactId>  
+			 	<version>2.2</version>  
+			 	<configuration>
+			        <path>/</path> 
+			        <port>8888</port>
+			        <contextReloadable>true</contextReloadable>
+			        <!-- 
+			        <ajpPort>18009</ajpPort>
+			        <httpsPort>18443</httpsPort>
+			        <keystoreFile>${user.home}/.keystore</keystoreFile>
+			        <keystorePass>changeit</keystorePass>
+			         -->
+			 	</configuration>
+			</plugin>
 		    
 		</plugins>
 	</build>

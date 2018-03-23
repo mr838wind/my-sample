@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-  	<title>vSlot-Simulator</title>
+  	<title>sample</title>
   	<jsp:include page="../common/inc-header.jsp" />
   	
   	<!-- custom css -->
@@ -37,17 +37,10 @@
                         </div>
                         <div class="panel-body">
                                <div class="row">
-                                   <label class="col col-lg-3">seq</label>
-                                   <div class="col col-lg-3 text-right">test</div>
-                                   <label class="col col-lg-3" >stage</label>
-                                   <div class="col col-lg-3" >test</div>
-                               </div>
-                               
-                               <div class="row">
-                                   <label class="col col-lg-3">시간</label>
-                                   <div class="col col-lg-3 ">test</div>
-                                   <label class="col col-lg-3" >사용자</label>
-                                   <div class="col col-lg-3" >test</div>
+                                   <label class="col col-lg-3">id</label>
+                                   <div class="col col-lg-3 text-right">${result.id}</div>
+                                   <label class="col col-lg-3" >name</label>
+                                   <div class="col col-lg-3" >${result.name}</div>
                                </div>
                                
                         </div>

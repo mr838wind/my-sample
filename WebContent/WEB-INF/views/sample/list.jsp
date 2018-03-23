@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-  	<title>vSlot-Simulator</title>
+  	<title>sample</title>
   	<jsp:include page="../common/inc-header.jsp" />
   	
   	<!-- custom -->
@@ -45,20 +45,18 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-history">
                                 <thead>
                                     <tr>
-                                        <th>시간</th>
-                                        <th>사용자</th>
-                                        <th>실행횟수</th>
+                                        <th>id</th>
+                                        <th>name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     
                                     <c:forEach var="item" items="${result}">
-                                    	<c:url var="detailUrl" value="/detail" />
+                                    	<c:url var="detailUrl" value="/detail/${item.id}" />
                                     
 	                                    <tr onclick="goUrl('${detailUrl}');" >
-	                                        <td>ddd</td>
-	                                        <td>aaa</td>
-	                                        <td class="text-right">ddd</td>
+	                                        <td>${ item.id }</td>
+	                                        <td>${ item.name }</td>
 	                                    </tr>
                                     </c:forEach>
                                

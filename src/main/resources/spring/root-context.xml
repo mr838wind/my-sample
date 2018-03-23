@@ -32,7 +32,37 @@
 	<util:properties id="props" location="classpath:/system.properties" />     
 	
 	
-    <!-- -->
+	
+    <!-- test embedded db --> 
+   	<!-- -->
+    <bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+	    <property name="driverClassName" value="org.h2.Driver" />
+	    <property name="url" value="jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MYSQL" />
+	    <property name="username" value="sa" />
+	    <property name="password" value="" />
+	</bean>
+	
+	<jdbc:initialize-database data-source="dataSourceSpied" ignore-failures="DROPS">
+	    <jdbc:script location="classpath:db/01_schema.sql" />
+	    <jdbc:script location="classpath:db/02_data_init.sql" />
+	    <jdbc:script location="classpath:db/03_data_test.sql" />
+	</jdbc:initialize-database>
+	
+	<bean id="h2WebServer" class="org.h2.tools.Server" factory-method="createWebServer" init-method="start" destroy-method="stop">
+	    <constructor-arg >
+	    	<list>
+	    		<value>-webPort</value>
+		    	<value>9092</value>
+		    	<value>-webAllowOthers</value>
+	    	</list>
+	    </constructor-arg>
+	</bean>
+	 
+    <!-- //test embedded db -->
+	
+	
+	
+    <!-- real db: 
     <bean id="dataSourceSpied" class="org.apache.ibatis.datasource.pooled.PooledDataSource" >
         <property name="driver" value="${db.driver}"></property>
         <property name="url" value="${db.url}"></property>
@@ -47,6 +77,7 @@
         <property name="poolPingConnectionsNotUsedFor" value="43200"/>
         <property name="poolTimeToWait" value="30000"/>
     </bean>
+    -->
     
 	<bean id="dataSource" class="net.sf.log4jdbc.sql.jdbcapi.DataSourceSpy">
 		<constructor-arg ref="dataSourceSpied" />

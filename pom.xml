@@ -263,14 +263,16 @@
 		    <version>0.4.8</version>
 		</dependency>
 		 -->
-		<!-- test embedded db 
+		 
+		<!-- test embedded db : may try(HSQLDB, H2, Derby ...)
+		-->
 		<dependency>
 		    <groupId>com.h2database</groupId>
 		    <artifactId>h2</artifactId>
 		    <version>1.4.192</version>
 		    <scope>runtime</scope>
 		</dependency>	
-		-->
+		
 	</dependencies>
 
 
@@ -407,7 +409,7 @@
 			 	<version>2.2</version>  
 			 	<configuration>
 			        <path>/</path> 
-			        <port>8888</port>
+			        <port>9090</port>
 			        <contextReloadable>true</contextReloadable>
 			        <!-- 
 			        <ajpPort>18009</ajpPort>

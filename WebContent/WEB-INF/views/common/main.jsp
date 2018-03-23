@@ -30,28 +30,12 @@
                             Basic
                         </div>
                         <div class="panel-body">
-							<a href="/list" class="btn btn-outline btn-primary">simulator</a>
+							<a href="/SampleController/list" class="btn btn-outline btn-primary">simulator</a>
                         </div>
                     </div>
                 </div>
 	        </div>
 	        
-        	<div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            Stage01
-                        </div>
-                        <div class="panel-body">
-							<a href="/list" class="btn btn-outline btn-primary">bonus</a>
-							<a href="/list" class="btn btn-outline btn-primary">freespin</a>
-							<a href="/list" class="btn btn-outline btn-primary">simulator</a>
-                        </div>
-                    </div>
-                </div>
-	        </div>
-        
-        
         
         
         

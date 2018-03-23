@@ -52,7 +52,7 @@
                                 <tbody>
                                     
                                     <c:forEach var="item" items="${result}">
-                                    	<c:url var="detailUrl" value="/detail/${item.id}" />
+                                    	<c:url var="detailUrl" value="/SampleController/detail/${item.id}" />
                                     
 	                                    <tr onclick="goUrl('${detailUrl}');" >
 	                                        <td>${ item.id }</td>

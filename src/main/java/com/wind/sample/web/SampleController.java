@@ -23,6 +23,7 @@ import com.wind.sample.service.SampleVO;
  *
  */
 @Controller
+@RequestMapping(value = "/SampleController") 
 public class SampleController {
 	
 	@Autowired

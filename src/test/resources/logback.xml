@@ -9,7 +9,7 @@
 	<property name="LOG_FILE_NAME" value="test-my-sample.log" />
     <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
     <property name="LOG_BASE_PACKAGE" value="com.wind" />
-    <property name="LOG_BASE_PACKAGE_TEST" value="test.wdfall.slot" />
+    <property name="LOG_BASE_PACKAGE_TEST" value="test" />
     
     
     
@@ -58,26 +58,23 @@
     <!-- sql -->
 	<logger name="jdbc" level="OFF"/>
 	
-	<logger name="jdbc.sqlonly" level="DEBUG" additivity="false">>
+	<logger name="jdbc.sqlonly" level="OFF" additivity="false">>
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
 	</logger>  
 	
-	<logger name="jdbc.sqltiming" level="ERROR" additivity="false">>
+	<logger name="jdbc.sqltiming" level="INFO" additivity="false">>
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
 	</logger> 
 	
-	<logger name="jdbc.resultsettable" level="ERROR" additivity="false">> 
+	<logger name="jdbc.resultsettable" level="OFF" additivity="false">> 
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
 	</logger>
 
     <!-- others -->
-    <logger name="com.wind.business.simulator.loader" level="INFO" additivity="false" >
-        <appender-ref ref="STDOUT" />
-        <appender-ref ref="FILE" />
-    </logger>
+    
     
     
     

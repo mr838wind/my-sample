@@ -1,11 +1,17 @@
  --------------
- spring-test 
+ [done]spring-test 
  paging sample
  UI sample
- vue.js 
- angular ...
 
 
  --------------
  mvn tomcat7 redeploy 
+ sping boot
+ gradle
+ vue.js 
+ angular
+ template 자동생성
+ dao사용 기타방식
+ 
+
 

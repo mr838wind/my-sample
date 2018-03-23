@@ -34,7 +34,7 @@
 	
 	
     <!-- test embedded db --> 
-   	<!-- -->
+   	<!-- test change h2WebServer port to  19092 -->
     <bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
 	    <property name="driverClassName" value="org.h2.Driver" />
 	    <property name="url" value="jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MYSQL" />
@@ -52,7 +52,7 @@
 	    <constructor-arg >
 	    	<list>
 	    		<value>-webPort</value>
-		    	<value>9092</value>
+		    	<value>19092</value>
 		    	<value>-webAllowOthers</value>
 	    	</list>
 	    </constructor-arg>

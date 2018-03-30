@@ -6,6 +6,13 @@
 	<packaging>war</packaging>
   
   
+  	<!-- 
+  		profile 정의 : default(개발), test(테스트), prod(운영)
+  		production 빌드시 option 추가: 
+		-Dspring.profiles.active=prod 
+  	-->
+  
+  
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	  <maven.compiler.source>1.8</maven.compiler.source>

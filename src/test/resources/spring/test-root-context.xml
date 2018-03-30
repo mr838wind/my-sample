@@ -29,56 +29,11 @@
 	<bean id="systemProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 	    <property name="location" value="classpath:/system.properties"/>
 	</bean>
-	<util:properties id="props" location="classpath:/system.properties" />     
+	<util:properties id="props" location="classpath:/system.properties" />   
+	
+	<!-- <context:property-placeholder location="classpath:/system.properties" />  -->
 	
 	
-	
-    <!-- test embedded db --> 
-   	<!-- test change h2WebServer port to  19092 -->
-    <bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
-	    <property name="driverClassName" value="org.h2.Driver" />
-	    <property name="url" value="jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MYSQL" />
-	    <property name="username" value="sa" />
-	    <property name="password" value="" />
-	</bean>
-	
-	<jdbc:initialize-database data-source="dataSourceSpied" ignore-failures="DROPS">
-	    <jdbc:script location="classpath:db/01_schema.sql" />
-	    <jdbc:script location="classpath:db/02_data_init.sql" />
-	    <jdbc:script location="classpath:db/03_data_test.sql" />
-	</jdbc:initialize-database>
-	
-	<bean id="h2WebServer" class="org.h2.tools.Server" factory-method="createWebServer" init-method="start" destroy-method="stop">
-	    <constructor-arg >
-	    	<list>
-	    		<value>-webPort</value>
-		    	<value>19092</value>
-		    	<value>-webAllowOthers</value>
-	    	</list>
-	    </constructor-arg>
-	</bean>
-	 
-    <!-- //test embedded db -->
-	
-	
-	
-    <!-- real db: 
-    <bean id="dataSourceSpied" class="org.apache.ibatis.datasource.pooled.PooledDataSource" >
-        <property name="driver" value="${db.driver}"></property>
-        <property name="url" value="${db.url}"></property>
-        <property name="username" value="${db.username}"></property>
-        <property name="password" value="${db.password}"></property>
-        
-        <property name="poolMaximumActiveConnections" value="20"/>
-        <property name="poolMaximumIdleConnections" value="20"/>
-        <property name="poolMaximumCheckoutTime" value="20000"/>
-        <property name="poolPingEnabled" value="true"/>
-        <property name="poolPingQuery" value="select 1"/>
-        <property name="poolPingConnectionsNotUsedFor" value="43200"/>
-        <property name="poolTimeToWait" value="30000"/>
-    </bean>
-    -->
-    
 	<bean id="dataSource" class="net.sf.log4jdbc.sql.jdbcapi.DataSourceSpy">
 		<constructor-arg ref="dataSourceSpied" />
 	</bean>
@@ -104,6 +59,85 @@
         <constructor-arg ref="sqlSessionFactory"></constructor-arg>
     </bean>
     
+    
+    
+    <!-- ############ profile ############  -->
+    <beans profile="default">
+	    <!-- test embedded db --> 
+	   	<!-- -->
+	    <bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		    <property name="driverClassName" value="org.h2.Driver" />
+		    <property name="url" value="jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MYSQL" />
+		    <property name="username" value="sa" />
+		    <property name="password" value="" />
+		</bean>
+		
+		<jdbc:initialize-database data-source="dataSourceSpied" ignore-failures="DROPS">
+		    <jdbc:script location="classpath:db/01_schema.sql" />
+		    <jdbc:script location="classpath:db/02_data_init.sql" />
+		    <jdbc:script location="classpath:db/03_data_test.sql" />
+		</jdbc:initialize-database>
+		
+		<bean id="h2WebServer" class="org.h2.tools.Server" factory-method="createWebServer" init-method="start" destroy-method="stop">
+		    <constructor-arg >
+		    	<list>
+		    		<value>-webPort</value>
+			    	<value>9092</value>
+			    	<value>-webAllowOthers</value>
+		    	</list>
+		    </constructor-arg>
+		</bean>
+    	<!-- //test embedded db -->
+   	</beans>
+	 
+    
+    <beans profile="test">
+	    <!-- test embedded db --> 
+	   	<!-- -->
+	    <bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		    <property name="driverClassName" value="org.h2.Driver" />
+		    <property name="url" value="jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MYSQL" />
+		    <property name="username" value="sa" />
+		    <property name="password" value="" />
+		</bean>
+		
+		<jdbc:initialize-database data-source="dataSourceSpied" ignore-failures="DROPS">
+		    <jdbc:script location="classpath:db/01_schema.sql" />
+		    <jdbc:script location="classpath:db/02_data_init.sql" />
+		    <jdbc:script location="classpath:db/03_data_test.sql" />
+		</jdbc:initialize-database>
+		
+		<bean id="h2WebServer" class="org.h2.tools.Server" factory-method="createWebServer" init-method="start" destroy-method="stop">
+		    <constructor-arg >
+		    	<list>
+		    		<value>-webPort</value>
+			    	<value>9092</value>
+			    	<value>-webAllowOthers</value>
+		    	</list>
+		    </constructor-arg>
+		</bean>
+		<!-- //test embedded db -->
+   	</beans>
+	
+	
+	
+	<beans profile="prod"> 
+	    <!-- real db: --> 
+	    <bean id="dataSourceSpied" class="org.apache.ibatis.datasource.pooled.PooledDataSource" >
+	        <property name="driver" value="${db.driver}"></property>
+	        <property name="url" value="${db.url}"></property>
+	        <property name="username" value="${db.username}"></property>
+	        <property name="password" value="${db.password}"></property>
+	        
+	        <property name="poolMaximumActiveConnections" value="20"/>
+	        <property name="poolMaximumIdleConnections" value="20"/>
+	        <property name="poolMaximumCheckoutTime" value="20000"/>
+	        <property name="poolPingEnabled" value="true"/>
+	        <property name="poolPingQuery" value="select 1"/>
+	        <property name="poolPingConnectionsNotUsedFor" value="43200"/>
+	        <property name="poolTimeToWait" value="30000"/>
+	    </bean>
+    </beans>
     
 	
 </beans>
